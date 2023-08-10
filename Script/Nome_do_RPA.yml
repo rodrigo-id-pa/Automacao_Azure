@@ -1,0 +1,20 @@
+trigger:
+  branches:
+    include:
+      - master
+
+jobs:
+  - job: ExecutarScript
+    displayName: 'Executar script Python'
+    pool:
+      vmImage: 'windows-2019'
+    variables:
+      - group: NOME_DO_GRUPO
+    steps:
+      - task: UsePythonVersion@0
+        inputs:
+          versionSpec: '3.11'
+          addToPath: true
+      - script: |
+          python HUB_DADOS/RPA_016_CAGED/Script/main.py "$(chave_do_portal_azure_na_variavel_grupo)"
+        displayName: 'Executar script'
