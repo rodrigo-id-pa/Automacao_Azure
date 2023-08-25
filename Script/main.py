@@ -1,7 +1,7 @@
 ### INCIANDO O SCRIPT ###
 from config import data_hora_atual, registrar_print
 from getToken import check_credentials
-from functions import criar_pasta_log, criar_log, listar_conteudo_pasta, ler_arquivo, remover_acentuacao_titulos, inserir_dados_cagedexc, inserir_dados_cagedfor, inserir_dados_cagedmov
+from functions import *
 from variables import id_pasta_log, lista_prints
 import traceback
 import pandas as pd
