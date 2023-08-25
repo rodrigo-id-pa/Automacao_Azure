@@ -16,5 +16,5 @@ jobs:
           versionSpec: '3.11'
           addToPath: true
       - script: |
-          python HUB_DADOS/RPA_016_CAGED/Script/main.py "$(chave_do_portal_azure_na_variavel_grupo)"
+          python /Script/main.py "$(chave_do_portal_azure_na_variavel_grupo)"
         displayName: 'Executar script'
